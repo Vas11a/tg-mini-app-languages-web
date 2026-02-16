@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  /* === Primary (Peach) === */
+  /* --color-primary: #F4A261; */
+  --color-primary: #F79C42;
+
+
+  --color-dark:  #631e0b;
+
+  --color-red-40: #ff8164;
+  --color-red-10: #ffccbc;
+}
+
+.test{
+  background: #631e0b;
+}
