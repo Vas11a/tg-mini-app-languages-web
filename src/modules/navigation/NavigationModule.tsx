@@ -10,7 +10,7 @@ interface Props {
 
 const NavigationModule = ({ setPage, page }: Props) => {
   return (
-    <div className="relative w-full py-2 flex justify-between bg-primary/10 shadow-md border-primary/30 border-b-4 rounded-2xl">
+    <div className="relative  w-full py-2 flex justify-between bg-primary/10 shadow-md border-primary/30 border-b-4 rounded-2xl">
       <div
         className="absolute h-13 w-13 rounded-full z-20 -top-4 outline-4 outline-primary/30 bg-primary/80 flex justify-center items-center "
         style={{ left: "calc(50% - 26px)" }}
@@ -28,9 +28,7 @@ const NavigationModule = ({ setPage, page }: Props) => {
         <div className="absolute rounded-2xl pointer-events-none"></div>
         <DeckIcon
           className={`w-5 h-auto ${page === "home" ? "" : "opacity-30"}`}
-          color={
-            page === "home" ? "var(--color-primary)" : "var(--color-primary)"
-          }
+          color="var(--color-primary)"
         />
         <div
           className={`text-xs select-none ${page === "home" ? "text-primary" : "text-primary/40"}`}
@@ -45,9 +43,7 @@ const NavigationModule = ({ setPage, page }: Props) => {
         <div className="absolute rounded-2xl pointer-events-none"></div>
         <ProfileIcon
           className={`w-5 h-auto ${page === "profile" ? "" : "opacity-30"}`}
-          color={
-            page === "profile" ? "var(--color-primary)" : "var(--color-primary)"
-          }
+          color="var(--color-primary)"
         />
         <div
           className={`text-xs select-none ${page === "profile" ? "text-primary" : "text-primary/40"}`}
