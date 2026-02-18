@@ -12,7 +12,6 @@ export const WorldIcon: React.FC<WorldIconProps> = ({
   color = "currentColor",
   background,
   size,
-  strokeWidth = 2,
   className,
 }) => {
   return (
