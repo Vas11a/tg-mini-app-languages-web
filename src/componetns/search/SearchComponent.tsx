@@ -5,7 +5,7 @@ import { BarChartIcon } from "../../images/BarChartIcon";
 
 const SearchComponent = () => {
   return (
-    <div className="p-2 flex flex-col gap-2 rounded-2xl bg-primary/10">
+    <div className="p-2 flex flex-col gap-2 rounded-2xl bg-primary/15">
       <div className="relative flex justify-between ">
         <input
           type="text"
@@ -18,11 +18,11 @@ const SearchComponent = () => {
         />
       </div>
       <div className="flex items-center gap-2">
-        <div className="flex-1 bg-white text-dark p-2 py-1.5 flex items-center gap-2 rounded-lg text-[14px]   shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_10px_rgba(0,0,0,0.04)]">
+        <div className="flex-1 bg-white text-dark p-2 py-2 flex items-center gap-2 rounded-lg text-[14px]   shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_10px_rgba(0,0,0,0.04)]">
           <WorldIcon className="w-auto h-4.5" color="var(--color-primary)" />
           <div>All languaged</div>
         </div>
-        <div className="flex-1 bg-white text-dark p-2 py-1.5 flex items-center gap-2 rounded-lg text-[14px]   shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_10px_rgba(0,0,0,0.04)]">
+        <div className="flex-1 bg-white text-dark p-2 py-2 flex items-center gap-2 rounded-lg text-[14px]   shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_10px_rgba(0,0,0,0.04)]">
           <BarChartIcon className="w-auto h-4.5" color="var(--color-primary)" />
           <div>All levels</div>
         </div>

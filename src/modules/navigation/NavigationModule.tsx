@@ -12,15 +12,15 @@ const NavigationModule = ({ setPage, page }: Props) => {
   return (
     <div className="relative  w-full py-2 flex justify-between bg-primary/10 shadow-md border-primary/30 border-b-4 rounded-2xl">
       <div
-        className="absolute h-13 w-13 rounded-full z-20 -top-4 outline-4 outline-primary/30 bg-primary/80 flex justify-center items-center "
+        className="absolute h-13 w-13 rounded-full z-20 -top-4 outline-4 outline-primary/20 bg-primary/80 flex justify-center items-center "
         style={{ left: "calc(50% - 26px)" }}
       >
         <PlusIcon className="w-8 h-auto" color="var(--color-white)" />
       </div>
-      <div
-        className="absolute h-15 w-15 rounded-full z-10 -top-5 bg-white outline outline-white "
+      {/* <div
+        className="absolute h-15 w-15 rounded-full z-10 -top-5 bg-white "
         style={{ left: "calc(50% - 30px)" }}
-      ></div>
+      ></div> */}
       <div
         onClick={() => setPage("home")}
         className={`relative duration-300 cursor-pointer flex flex-col gap-1 flex-1 justify-center items-center`}
