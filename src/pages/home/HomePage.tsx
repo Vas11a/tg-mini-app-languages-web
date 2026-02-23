@@ -1,5 +1,5 @@
 import React from "react";
-import SearchComponent from "../../componetns/search/SearchComponent";
+import SearchComponent from "../../modules/search/SearchComponent";
 import DeckListModule from "../../modules/deck_list/DeckListModule";
 
 const HomePage = () => {
