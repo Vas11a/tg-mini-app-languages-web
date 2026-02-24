@@ -1,11 +1,11 @@
 import React from "react";
-import SearchComponent from "../../modules/search/SearchComponent";
+import FilterModule from "../../modules/filter/FilterModule";
 import DeckListModule from "../../modules/deck_list/DeckListModule";
 
 const HomePage = () => {
   return (
     <div className="flex flex-col flex-1 overflow-hidden">
-      <SearchComponent />
+      <FilterModule />
       <DeckListModule />
     </div>
   );
