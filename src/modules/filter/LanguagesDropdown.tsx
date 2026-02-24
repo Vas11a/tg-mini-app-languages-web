@@ -8,6 +8,7 @@ import {
 import { languages, type Language } from "../../state/slices/filters/languages";
 import { PlusIcon } from "../../images/PlusIcon";
 import { MinusIcon } from "../../images/MinusIcon";
+import { formatTitle } from "./utils";
 
 const LanguagesDropdown = () => {
   const { selectedLanguages, customUserLanguages } = useAppSelector(
@@ -94,17 +95,6 @@ const LanguagesDropdown = () => {
     setIsDropDownOpen(false);
   };
 
-  const formatTitle = (value: string) => {
-    if (!value) return value;
-    const capitalized = value.charAt(0).toUpperCase() + value.slice(1);
-
-    if (capitalized.length > 15) {
-      return capitalized.slice(0, 15) + "...";
-    }
-
-    return capitalized;
-  };
-
   const getDropDownTitle = () => {
     const noBase = localSelectedLanguages.length === 0;
 
@@ -141,17 +131,17 @@ const LanguagesDropdown = () => {
         onClick={() =>
           isDropDownOpen ? closeDropdown() : setIsDropDownOpen(true)
         }
-        className=" bg-white text-dark p-2 py-2 flex items-center gap-2 rounded-lg text-[14px]   shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_10px_rgba(0,0,0,0.04)]"
+        className={` bg-white cursor-pointer text-dark p-2 py-2 flex items-center gap-2 rounded-lg text-[14px]   shadow-[0_1px_2px_rgba(0,0,0,0.04),0_4px_10px_rgba(0,0,0,0.04)] ${isDropDownOpen ? "outline outline-primary/60" : ""}`}
       >
         <WorldIcon className="w-auto h-4.5" color="var(--color-primary)" />
         <div>{getDropDownTitle()}</div>
       </div>
       {isDropDownOpen && (
         <div
-          style={{ width: "calc(200% + 23.5px)" }}
-          className="absolute w-full z-30 bg-white p-2 rounded-xl h-45 overflow-auto flex flex-col gap-1 shadow text-dark top-10.5 text-[16px]"
+          style={{ width: "calc(200% + 8px)" }}
+          className="absolute w-full cursor-pointer border border-primary/20 z-30 bg-white p-2 rounded-xl h-45 overflow-auto flex flex-col gap-1 shadow text-dark top-10.5 text-[16px]"
         >
-          <div className="font-medium mb-1">Base languages</div>
+          {/* <div className="font-medium mb-1">Base languages</div> */}
           {languages.map((lang) => (
             <div
               className="flex items-center gap-2"
@@ -168,7 +158,7 @@ const LanguagesDropdown = () => {
             </div>
           ))}
           <div className="mt-2">
-            <div className="font-medium mb-1">Can't find your language?</div>
+            {/* <div className="font-medium mb-1">Can't find your language?</div> */}
             <div className="flex flex-col gap-1.5">
               {localCustomUserLanguages.map((lang, idx) => (
                 <div className="flex gap-2 items-center" key={idx}>
@@ -179,21 +169,21 @@ const LanguagesDropdown = () => {
                       changeLocalCustomUserLanguages(e.target.value, idx)
                     }
                     placeholder="Other language…"
-                    className="rounded-lg w-1/2 text-[15px] text-dark-main p-0.5 px-1 border-2 border-primary/60 focus:outline-none focus:border-primary"
+                    className=" w-1/2 text-[15px] text-dark-main p-0.5 px-1 border-b-2 border-primary/60 focus:outline-none focus:border-primary"
                   />
                   {idx === localCustomUserLanguages.length - 1 ? (
                     <div
                       onClick={addNewCustomLanguageField}
-                      className={`flex justify-center items-center bg-primary/80 w-fit px-3 rounded-lg py-1`}
+                      className={`flex justify-center items-center border-2 border-primary/80  w-fit px-2 rounded-lg py-0.5`}
                     >
-                      <PlusIcon color="white" className="w-5 h-5" />
+                      <PlusIcon color="#F79C42" className="w-5 h-5" />
                     </div>
                   ) : (
                     <div
                       onClick={() => removeCustomLanguageField(idx)}
-                      className="flex justify-center items-center bg-primary/80 w-fit px-3 rounded-lg py-1"
+                      className="flex justify-center items-center border-2 border-primary/80  w-fit px-2 rounded-lg py-0.5"
                     >
-                      <MinusIcon color="white" className="w-5 h-5" />
+                      <MinusIcon color="#F79C42" className="w-5 h-5" />
                     </div>
                   )}
                 </div>
