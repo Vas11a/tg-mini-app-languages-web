@@ -12,7 +12,8 @@ const NavigationModule = ({ setPage, page }: Props) => {
   return (
     <div className="relative  w-full py-2 flex justify-between bg-primary/10 shadow border-primary/30 border-b-4 rounded-2xl">
       <div
-        className="absolute h-13 w-13 rounded-full z-20 -top-4 outline-4 outline-primary/20 bg-primary/80 flex justify-center items-center "
+        onClick={() => setPage("deck_editor")}
+        className="absolute h-13 w-13 rounded-full z-20 -top-4 outline-4 outline-primary/20 bg-primary/80 flex justify-center items-center cursor-pointer"
         style={{ left: "calc(50% - 26px)" }}
       >
         <PlusIcon className="w-8 h-auto" color="var(--color-white)" />

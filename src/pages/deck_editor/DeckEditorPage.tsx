@@ -1,7 +1,12 @@
-import React from "react";
+import type { IPage } from "../../types/general.types";
+import DeckEditorModule from "../../modules/deck_editor/DeckEditorModule";
 
-const DeckEditorPage = () => {
-  return <div>DeckEditorPage</div>;
+interface Props {
+  setPage: (page: IPage) => void;
+}
+
+const DeckEditorPage = ({ setPage }: Props) => {
+  return <DeckEditorModule setPage={setPage} />;
 };
 
 export default DeckEditorPage;
